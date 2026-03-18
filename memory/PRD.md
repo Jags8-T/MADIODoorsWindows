@@ -25,11 +25,14 @@ Build a static and dynamic digital product catalogue for "Madio Doors & Windows"
 | `/print` | Print-ready PDF catalogue (cover + all products + back cover) |
 
 ## What's Been Implemented (March 2026)
-- [x] 18 products seeded in MongoDB with full specs (all new names, no NHPC)
+- [x] All 18 products seeded in MongoDB with full specs (all new names, no NHPC)
 - [x] Backend: GET /api/products (w/ category filter), GET /api/products/{id}, POST /api/contact
+- [x] Backend: Auto-syncs product images on every restart from PRODUCT_SEED
 - [x] Home page: hero, features strip, category cards, stats, CTA
 - [x] Dynamic catalogue: category filter tabs, search bar, 3-col product grid
 - [x] Product detail modal: image + specs table + features chips
+- [x] **WhatsApp enquiry button** on every product modal → wa.me/919948601899
+- [x] **Realistic product images** updated — actual window/door/partition photos
 - [x] Print/PDF catalogue: cover page, 2-col product grid per category, back cover
 - [x] About page: mission, vision, core values, product range overview
 - [x] Contact page: full address, phone, contact form with backend integration

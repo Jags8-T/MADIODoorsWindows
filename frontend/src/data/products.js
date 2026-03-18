@@ -25,7 +25,7 @@ export const PRODUCTS = [
       { key: 'Locking Type', value: 'Multipoint' },
       { key: 'Roller Capacity (2 Pcs)', value: '180 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1660949329162-d1571fc55d02?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1758565811178-6341e9999f48?auto=format&fit=crop&w=800&q=80',
     badge: 'Signature',
   },
   {
@@ -47,7 +47,7 @@ export const PRODUCTS = [
       { key: 'Locking Type', value: 'Multi Locking' },
       { key: 'Roller Capacity', value: '300 / 600 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1589004264768-3c3a7791dcc4?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -69,7 +69,7 @@ export const PRODUCTS = [
       { key: 'Aluminium Alloy', value: '6063' },
       { key: 'Roller Capacity', value: '250 / 500 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1758565811176-ccd94357a844?auto=format&fit=crop&w=800&q=80',
     badge: 'Most Popular',
   },
   {
@@ -93,7 +93,7 @@ export const PRODUCTS = [
       { key: 'Mosquito Net', value: 'Optional' },
       { key: 'Roller Capacity', value: '250 / 500 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1768077710231-f3a256362553?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -116,7 +116,7 @@ export const PRODUCTS = [
       { key: 'Locking Type', value: 'Multipoint' },
       { key: 'Roller Capacity', value: '180 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1749911775047-f542fba853bc?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -138,7 +138,7 @@ export const PRODUCTS = [
       { key: 'Locking Type', value: 'Multipoint' },
       { key: 'Roller Capacity', value: '280 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1732162933717-e87940716e10?auto=format&fit=crop&w=800&q=80',
     badge: 'Premium',
   },
   {
@@ -160,7 +160,7 @@ export const PRODUCTS = [
       { key: 'Locking Type', value: 'Multipoint' },
       { key: 'Roller Capacity', value: '380 Kg' },
     ],
-    image: 'https://images.unsplash.com/photo-1560440021-33f9b867899d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1731684449449-0156b49e3968?auto=format&fit=crop&w=800&q=80',
     badge: 'Heavy Duty',
   },
   // ─── CASEMENT WINDOWS ──────────────────────────────────────────────────────
@@ -180,7 +180,7 @@ export const PRODUCTS = [
       { key: 'Glass Range', value: '5 – 20 MM' },
       { key: 'Locking Type', value: 'Single & Multipoint' },
     ],
-    image: 'https://images.unsplash.com/photo-1543489822-c49534f3271f?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1771610947362-ade3a22642f2?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -199,7 +199,7 @@ export const PRODUCTS = [
       { key: 'Glass Range', value: '5 – 20 MM' },
       { key: 'Locking Type', value: 'Single & Multipoint' },
     ],
-    image: 'https://images.unsplash.com/photo-1561753757-d8880c5a3551?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1691036562229-f113ec2270df?auto=format&fit=crop&w=800&q=80',
     badge: 'Premium',
   },
   // ─── GLASS PARTITIONS ──────────────────────────────────────────────────────
@@ -217,7 +217,7 @@ export const PRODUCTS = [
       { key: 'Finish', value: 'Powder Coated' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1770048532712-4fde5ef7eb90?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1568865439677-aa00c4826dc2?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -235,7 +235,7 @@ export const PRODUCTS = [
       { key: 'Special Feature', value: 'Motorized Curtain' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1770993151375-0dee97eda931?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1770816306935-d0a08e93d823?auto=format&fit=crop&w=800&q=80',
     badge: 'Premium',
   },
   {
@@ -252,7 +252,7 @@ export const PRODUCTS = [
       { key: 'Finish', value: 'Powder Coated' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1765371512992-843e6a92d7e6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1765371512336-99c2b1c6975f?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -270,7 +270,7 @@ export const PRODUCTS = [
       { key: 'Special Feature', value: 'Motorized Curtain' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1770048532712-4fde5ef7eb90?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1568865439677-aa00c4826dc2?auto=format&fit=crop&w=800&q=80',
     badge: 'Signature',
   },
   {
@@ -287,7 +287,7 @@ export const PRODUCTS = [
       { key: 'Finish', value: 'Powder Coated' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1770993151375-0dee97eda931?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1770816306935-d0a08e93d823?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -304,7 +304,7 @@ export const PRODUCTS = [
       { key: 'Finish', value: 'Powder Coated' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1765371512992-843e6a92d7e6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1765371512336-99c2b1c6975f?auto=format&fit=crop&w=800&q=80',
     badge: null,
   },
   {
@@ -339,7 +339,7 @@ export const PRODUCTS = [
       { key: 'Finish', value: 'Powder Coated' },
       { key: 'Warranty', value: '15 Years' },
     ],
-    image: 'https://images.unsplash.com/photo-1770993151375-0dee97eda931?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1568865439677-aa00c4826dc2?auto=format&fit=crop&w=800&q=80',
     badge: 'New',
   },
   // ─── HARDWARE ──────────────────────────────────────────────────────────────
