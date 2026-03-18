@@ -1,0 +1,144 @@
+{
+  "brand_identity": {
+    "name": "Madio Doors & Windows",
+    "tagline": "Architectural Precision. Timeless Luxury.",
+    "archetype": "Jewel & Luxury + Performance Pro",
+    "emotional_tone": "Premium, Sleek, Precision-Engineered, Exclusive",
+    "theme_strategy": "Hybrid: Dark Mode Default (Web) / Light Mode (Print Export)"
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-none",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed text-muted-foreground",
+      "caption": "text-sm tracking-widest uppercase text-primary/80"
+    },
+    "weights": {
+      "heading_light": "font-light",
+      "heading_bold": "font-bold",
+      "body_regular": "font-normal"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#F5F5F5",
+      "primary": "#D4AF37",
+      "primary_foreground": "#000000",
+      "secondary": "#1A1A1A",
+      "secondary_foreground": "#FFFFFF",
+      "muted": "#262626",
+      "muted_foreground": "#A3A3A3",
+      "accent": "#C9A84C",
+      "accent_foreground": "#000000",
+      "border": "rgba(212, 175, 55, 0.2)"
+    },
+    "gradients": {
+      "gold_sheen": "linear-gradient(135deg, #D4AF37 0%, #FFE5B4 50%, #D4AF37 100%)",
+      "dark_surface": "linear-gradient(to bottom, #0A0A0A, #141414)"
+    },
+    "status": {
+      "success": "#10B981",
+      "error": "#EF4444",
+      "warning": "#F59E0B",
+      "info": "#3B82F6"
+    }
+  },
+  "layout_strategy": {
+    "container": {
+      "max_width": "max-w-7xl mx-auto",
+      "padding": "px-6 md:px-12 lg:px-24"
+    },
+    "spacing": {
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "gap-8 md:gap-12",
+      "internal_padding": "p-8 md:p-12"
+    },
+    "grid_system": {
+      "bento_marketing": "grid grid-cols-1 md:grid-cols-12 gap-6",
+      "product_catalog": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+      "specs_table": "w-full text-sm border-collapse"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "border border-white/10 hover:border-primary/50 transition-colors duration-500",
+    "glassmorphism": "bg-black/40 backdrop-blur-xl border border-white/5",
+    "shadows": {
+      "card": "shadow-[0_8px_30px_rgb(0,0,0,0.12)]",
+      "glow": "drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+    },
+    "radius": "rounded-none md:rounded-sm",
+    "textures": {
+      "noise": "url('/assets/noise.png')",
+      "metal": "linear-gradient(45deg, #1a1a1a 25%, #2a2a2a 25%, #2a2a2a 50%, #1a1a1a 50%, #1a1a1a 75%, #2a2a2a 75%, #2a2a2a 100%)"
+    }
+  },
+  "components": [
+    {
+      "name": "CatalogueCard",
+      "path": "src/components/custom/CatalogueCard.js",
+      "description": "Premium product card with image reveal on hover and gold border trace.",
+      "props": {
+        "layout": "vertical",
+        "interactive": true
+      }
+    },
+    {
+      "name": "SpecTable",
+      "path": "src/components/custom/SpecTable.js",
+      "description": "High-density technical specification table for architects.",
+      "style": "Clean rows, gold separators, monospace font for numbers"
+    },
+    {
+      "name": "PrintView",
+      "path": "src/components/custom/PrintView.js",
+      "description": "Hidden by default, visible only in print mode. White bg, black text.",
+      "style": "@media print { body { background: white; color: black; } }"
+    },
+    {
+      "name": "GoldButton",
+      "path": "src/components/ui/button.jsx",
+      "description": "Customized Shadcn button with gold variants.",
+      "variants": ["default (gold)", "outline (gold border)", "ghost (gold text)"]
+    }
+  ],
+  "image_urls": {
+    "hero": {
+      "main_villa": "https://images.unsplash.com/photo-1709418354352-a1b6283c77d6?auto=format&fit=crop&q=80",
+      "luxury_interior": "https://images.unsplash.com/photo-1668277155898-704a26a5cfa3?auto=format&fit=crop&q=80"
+    },
+    "products": {
+      "sliding_doors": "https://images.unsplash.com/photo-1721222203357-098e3672276c?auto=format&fit=crop&q=80",
+      "casement_windows": "https://images.unsplash.com/photo-1758543646464-2bcddbd53927?auto=format&fit=crop&q=80",
+      "glass_partitions": "https://images.unsplash.com/photo-1660949329162-d1571fc55d02?auto=format&fit=crop&q=80"
+    },
+    "textures": {
+      "gold_metal": "https://images.unsplash.com/photo-1638888077595-039e77b1dc70?auto=format&fit=crop&q=80",
+      "brushed_dark": "https://images.unsplash.com/photo-1701405201438-f6eb1589cf2c?auto=format&fit=crop&q=80"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons.",
+    "Install 'framer-motion' for smooth page transitions and hover effects.",
+    "Use 'Playfair Display' for all H1-H3 headings. Use 'Manrope' for body text.",
+    "Implement a 'Print Catalogue' button that triggers window.print(). Ensure CSS @media print handles the layout changes (White background, remove interactive elements).",
+    "The 'Catalogue' page should use a Filter Sidebar (left) and Product Grid (right).",
+    "Product Detail Modal must be immersive: Large image on left, Specs on right.",
+    "Use the provided image URLs for placeholders.",
+    "Ensure the gold color (#D4AF37) is used sparingly for accents, borders, and active states—not for large backgrounds."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for dark colors.",
+    "Avoid generic centered layouts; use asymmetry.",
+    "Use 12-24px blur for glassmorphism.",
+    "Do not use 'transition: all'.",
+    "All interactive elements must have data-testid.",
+    "Use 'sonner' for toasts."
+  ]
+}
