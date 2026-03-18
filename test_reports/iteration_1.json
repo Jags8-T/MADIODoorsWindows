@@ -1,0 +1,32 @@
+{
+  "summary": "Full e2e testing of Madio Doors & Windows catalogue app. Backend APIs all pass (13/13). Frontend UI fully functional - home page, catalogue, about, contact, print pages all working correctly.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Contact page - Address",
+        "issues": ["Address shows 'Shilpa Layout, Weaker Section Colony, Izzathnagar, Shilpa Hills' which seems more verbose than the specified '1, Plot, Road, Hitex Road, Kondapur'. Minor mismatch but functionally fine."]
+      }
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_madio_api.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "server.py uses deprecated @app.on_event('startup'/'shutdown') — should use lifespan context manager in FastAPI 0.95+",
+    "Contact address in Contact.js has extra lines (Shilpa Layout, Weaker Section Colony, Izzathnagar, Shilpa Hills) not matching the specified brief address"
+  ],
+  "updated_files": ["/app/backend/tests/test_madio_api.py"],
+  "success_rate": {"backend": "100% (13/13)", "frontend": "100%"},
+  "seed_data_creation": "18 products seeded in MongoDB on startup",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "All core flows verified: home page hero/tagline/CTAs, catalogue with 18 products + category filters + search, product modal with specs, about page (mission/vision/values), contact form (submit working), print page (/print) with all 18 products. No NHPC branding found anywhere. Backend APIs: /api/products returns 18 items, category filters work, /api/contact saves and responds correctly."
+}
