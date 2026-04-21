@@ -11,57 +11,46 @@ function WhatsAppIcon() {
   );
 }
 
-const BADGE_COLORS = {
-  Signature:     'bg-[#D4AF37]/20 text-[#D4AF37] border-[#D4AF37]/40',
-  Premium:       'bg-amber-900/30 text-amber-300 border-amber-600/40',
-  'Most Popular':'bg-blue-900/30 text-blue-300 border-blue-600/40',
-  'Heavy Duty':  'bg-stone-900/30 text-stone-300 border-stone-600/40',
-  New:           'bg-emerald-900/30 text-emerald-300 border-emerald-600/40',
-  'Best Seller': 'bg-[#D4AF37]/20 text-[#D4AF37] border-[#D4AF37]/40',
-};
-
 export default function ProductModal({ product, onClose }) {
   if (!product) return null;
 
-  const waText = encodeURIComponent(
-    `Hi, I'm interested in ${product.name} – ${product.subtitle}. Could you please share more details and pricing?`
-  );
-  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
+  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    `Hi, I'm interested in ${product.name} – ${product.subtitle}. Could you share more details and pricing?`
+  )}`;
 
   return (
     <div
       data-testid="product-modal-overlay"
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fade-in"
-      style={{ backgroundColor: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(8px)' }}
+      style={{ backgroundColor: 'rgba(0,0,0,0.87)', backdropFilter: 'blur(8px)' }}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
         data-testid="product-modal"
-        className="bg-[#111111] border border-[var(--dark-border)] w-full max-w-4xl max-h-[90vh] overflow-y-auto animate-fade-up relative"
-        style={{ borderRadius: '2px' }}
+        className="w-full max-w-4xl max-h-[90vh] overflow-y-auto animate-fade-up relative border"
+        style={{ background: 'var(--th-card)', borderColor: 'var(--th-border)', borderRadius: '2px' }}
       >
-        {/* Close */}
         <button
           data-testid="product-modal-close"
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 text-[#A3A3A3] hover:text-[#D4AF37] transition-colors duration-300 bg-black/40 p-2 rounded-sm"
-          aria-label="Close"
+          className="absolute top-4 right-4 z-10 p-2 rounded-sm transition-colors"
+          style={{ color: 'var(--th-muted)', background: 'rgba(0,0,0,0.3)' }}
+          onMouseEnter={e => e.currentTarget.style.color = 'var(--th-accent)'}
+          onMouseLeave={e => e.currentTarget.style.color = 'var(--th-muted)'}
         >
           <X size={18} />
         </button>
 
         <div className="grid md:grid-cols-2">
-          {/* Left: Image */}
+          {/* Image */}
           <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[420px] overflow-hidden">
             <img
               src={product.image}
               alt={product.name}
               className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.src = 'https://images.unsplash.com/photo-1758565811178-6341e9999f48?auto=format&fit=crop&w=800&q=80';
-              }}
+              onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1758565811178-6341e9999f48?auto=format&fit=crop&w=800&q=80'; }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#111111]/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20" />
             <div className="absolute bottom-4 left-4">
               <span className="section-label bg-black/60 px-3 py-1 backdrop-blur-sm text-[10px]">
                 {product.categoryLabel}
@@ -69,35 +58,35 @@ export default function ProductModal({ product, onClose }) {
             </div>
           </div>
 
-          {/* Right: Details */}
+          {/* Details */}
           <div className="p-8 flex flex-col gap-5">
-            {/* Header */}
             <div>
               {product.badge && (
-                <span className={`inline-block text-[10px] border px-2 py-0.5 mb-2 font-manrope tracking-wider uppercase ${BADGE_COLORS[product.badge] || 'bg-[#D4AF37]/20 text-[#D4AF37] border-[#D4AF37]/40'}`}>
+                <span className="inline-block text-[10px] border px-2 py-0.5 mb-2 font-manrope tracking-wider uppercase"
+                  style={{ color: 'var(--th-accent)', borderColor: 'var(--th-accent)', background: 'rgba(var(--th-accent),0.08)' }}>
                   {product.badge}
                 </span>
               )}
-              <h2 data-testid="product-modal-name" className="font-playfair text-2xl md:text-3xl text-white leading-tight">
+              <h2 data-testid="product-modal-name" className="font-playfair text-2xl md:text-3xl leading-tight"
+                style={{ color: 'var(--th-text)' }}>
                 {product.name}
               </h2>
-              <p className="text-[#A3A3A3] text-sm mt-1 font-manrope">{product.subtitle}</p>
+              <p className="text-sm mt-1 font-manrope" style={{ color: 'var(--th-muted)' }}>{product.subtitle}</p>
               <span className="gold-line mt-3" />
             </div>
 
-            {/* Description */}
-            <p className="text-[#A3A3A3] text-sm leading-relaxed font-manrope">
+            <p className="text-sm leading-relaxed font-manrope" style={{ color: 'var(--th-muted)' }}>
               {product.description}
             </p>
 
-            {/* Features */}
             {product.features?.length > 0 && (
               <div>
                 <h4 className="section-label mb-2.5">Key Features</h4>
                 <div className="flex flex-wrap gap-2">
                   {product.features.map((feat, i) => (
-                    <span key={i} className="flex items-center gap-1.5 text-xs px-3 py-1.5 border border-[var(--dark-border)] text-[#A3A3A3] font-manrope">
-                      <CheckCircle size={10} className="text-[#D4AF37]" />
+                    <span key={i} className="flex items-center gap-1.5 text-xs px-3 py-1.5 border font-manrope"
+                      style={{ color: 'var(--th-muted)', borderColor: 'var(--th-border)' }}>
+                      <CheckCircle size={10} style={{ color: 'var(--th-accent)' }} />
                       {feat}
                     </span>
                   ))}
@@ -105,15 +94,15 @@ export default function ProductModal({ product, onClose }) {
               </div>
             )}
 
-            {/* Technical Specs */}
             {product.specs?.length > 0 && (
               <div>
                 <h4 className="section-label mb-2.5">Technical Specifications</h4>
-                <div className="border border-[var(--dark-border)]">
+                <div className="border" style={{ borderColor: 'var(--th-border)' }}>
                   {product.specs.map((spec, i) => (
-                    <div key={i} className={`spec-row flex items-center justify-between px-4 py-2.5 border-b border-[var(--dark-border)] last:border-b-0`}>
-                      <span className="text-xs text-[#A3A3A3] font-manrope">{spec.key}</span>
-                      <span className="text-xs font-mono-md text-[#D4AF37] font-medium">{spec.value}</span>
+                    <div key={i} className="spec-row flex items-center justify-between px-4 py-2.5 border-b last:border-b-0"
+                      style={{ borderColor: 'var(--th-border)' }}>
+                      <span className="text-xs font-manrope" style={{ color: 'var(--th-muted)' }}>{spec.key}</span>
+                      <span className="text-xs font-mono-md font-medium" style={{ color: 'var(--th-accent)' }}>{spec.value}</span>
                     </div>
                   ))}
                 </div>
@@ -121,19 +110,20 @@ export default function ProductModal({ product, onClose }) {
             )}
 
             {/* Warranty */}
-            <div className="flex items-center gap-2 text-xs text-[#555] font-manrope border-t border-[var(--dark-border)] pt-3">
-              <Shield size={12} className="text-[#D4AF37]" />
+            <div className="flex items-center gap-2 text-xs font-manrope border-t pt-3"
+              style={{ color: 'var(--th-deep)', borderColor: 'var(--th-border)' }}>
+              <Shield size={12} style={{ color: 'var(--th-accent)' }} />
               {product.category === 'partition' ? '15 Years Warranty' : '12 Years Warranty'} — Madio Quality Assurance
             </div>
 
-            {/* WhatsApp Enquiry Button */}
+            {/* WhatsApp CTA */}
             <a
               data-testid="whatsapp-enquiry-btn"
               href={waUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center gap-2.5 w-full py-3.5 font-manrope font-semibold text-sm text-white tracking-wide transition-opacity duration-300 hover:opacity-90 active:scale-[0.98]"
-              style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)', borderRadius: '2px' }}
+              className="flex items-center justify-center gap-2.5 w-full py-3.5 font-manrope font-bold text-sm text-white tracking-wide transition-opacity hover:opacity-90"
+              style={{ background: 'linear-gradient(135deg,#25D366,#128C7E)', borderRadius: '2px' }}
             >
               <WhatsAppIcon />
               Enquire on WhatsApp
