@@ -2,8 +2,14 @@
 import pytest
 import requests
 import os
+from dotenv import load_dotenv
+from pathlib import Path
 
-BASE_URL = os.environ.get('REACT_APP_BACKEND_URL').rstrip('/')
+# Load frontend .env for REACT_APP_BACKEND_URL
+load_dotenv(Path(__file__).parent.parent.parent / 'frontend' / '.env')
+BASE_URL = os.environ.get('REACT_APP_BACKEND_URL', '').rstrip('/')
+if not BASE_URL:
+    raise ValueError("REACT_APP_BACKEND_URL not set")
 
 
 class TestProductsAPI:
